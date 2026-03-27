@@ -10,7 +10,7 @@ export default function AboutPage() {
         {/* Cover Image */}
         <div className="w-full h-32 md:h-48 relative bg-muted">
           <Image
-            src="https://img.freepik.com/free-photo/glasses-lie-laptop-reflecting-light-from-screen-dark_169016-52267.jpg?semt=ais_hybrid&w=740&q=80"
+            src="about.jpg"
             alt="Cover Profile"
             fill
             className="object-cover"
@@ -37,7 +37,7 @@ export default function AboutPage() {
             <div className="flex flex-col gap-3 flex-1">
               <div>
                 <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
-                  Avi Pandit
+                  Abhishek Sharma
                   <CheckCircle2 size={18} className="text-muted-foreground" />
                   <span className="text-sm font-normal text-muted-foreground ml-1">He/Him</span>
                 </h1>
