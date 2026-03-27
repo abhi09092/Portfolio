@@ -10,7 +10,7 @@ export default function AboutPage() {
         {/* Cover Image */}
         <div className="w-full h-32 md:h-48 relative bg-muted">
           <Image
-            src="https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1200&auto=format&fit=crop"
+            src="https://img.freepik.com/free-photo/glasses-lie-laptop-reflecting-light-from-screen-dark_169016-52267.jpg?semt=ais_hybrid&w=740&q=80"
             alt="Cover Profile"
             fill
             className="object-cover"
@@ -22,8 +22,8 @@ export default function AboutPage() {
           {/* Avatar */}
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-card bg-card absolute -top-16 md:-top-20 z-10 shrink-0">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&auto=format&fit=crop"
-              alt="Avi Pandit"
+              src="profile.jpg"
+              alt="Abhishek Sharma"
               fill
               className="object-cover"
             />
@@ -42,19 +42,19 @@ export default function AboutPage() {
                   <span className="text-sm font-normal text-muted-foreground ml-1">He/Him</span>
                 </h1>
                 <p className="text-base text-foreground mt-1 font-medium leading-relaxed max-w-2xl">
-                  Senior Full Stack Engineer | React.js • Node.js • Next.js | UI-Focused Developer | Building scalable systems
+                  Full-Stack MERN Developer | React.js • Node.js • Next.js | UI-Focused Developer | Building scalable systems | Graphic Designer | Leadership & Entrepreneurial Skills
                 </p>
               </div>
               
               <div className="flex flex-col gap-1.5 text-sm text-muted-foreground mt-1">
                 <div className="flex flex-wrap items-center gap-y-1 gap-x-1.5">
-                  <span>San Francisco, California, United States</span>
+                  <span>Jalandhar, Punjab, India</span>
                   <span className="hidden sm:inline">•</span>
                   <span className="text-blue-600 dark:text-blue-500 hover:underline cursor-pointer font-medium">Contact info</span>
                 </div>
                 <div>
-                  <a href="https://avipandit.com" className="text-blue-600 dark:text-blue-500 font-medium hover:underline inline-flex items-center gap-1">
-                    avipandit.com <ExternalLink size={12} />
+                  <a href="https://abhisheksharmaaaa.vercel.app/" className="text-blue-600 dark:text-blue-500 font-medium hover:underline inline-flex items-center gap-1">
+                    abhisheksharma.com <ExternalLink size={12} />
                   </a>
                 </div>
                 <div className="mt-1">
@@ -80,14 +80,14 @@ export default function AboutPage() {
                  <div className="w-8 h-8 rounded bg-muted flex items-center justify-center overflow-hidden shrink-0 border border-border">
                    <Building2 size={16} className="text-foreground" />
                  </div>
-                 <span className="text-sm font-semibold group-hover:text-blue-500 group-hover:underline">Current Company</span>
+                 <span className="text-sm font-semibold group-hover:text-blue-500 group-hover:underline">CyperCode</span>
                </div>
                {/* Sample Education */}
                <div className="flex items-center gap-3 hover:bg-muted/50 p-2 -m-2 rounded-md transition-colors cursor-pointer group mt-1">
                  <div className="w-8 h-8 rounded bg-muted flex items-center justify-center overflow-hidden shrink-0 border border-border">
                    <Award size={16} className="text-foreground" />
                  </div>
-                 <span className="text-sm font-semibold group-hover:text-blue-500 group-hover:underline">Stanford University</span>
+                 <span className="text-sm font-semibold group-hover:text-blue-500 group-hover:underline">Lovely Professional University</span>
                </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
       <section className="bg-card p-6 md:p-8 rounded-2xl border border-border shadow-sm">
         <h2 className="text-2xl font-bold tracking-tight mb-4">About</h2>
         <p className="text-muted-foreground leading-relaxed whitespace-pre-wrap">
-          I'm a passionate engineer who loves bridging the gap between design and engineering. With over 6 years of experience, I specialize in building robust web applications and designing scalable systems from the ground up.
+          I'm a passionate engineer who loves bridging the gap between design and engineering. With over 2 years of experience, I specialize in building robust web applications and designing scalable systems from the ground up.
         </p>
       </section>
 
