@@ -7,11 +7,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const words = [
-  "digital products.",
-  "full stack apps.",
-  "web experiences.",
-  "software solutions.",
-  "graphic designs.",
+  "Full Stack developer",
+  "UI/UX",
+  "Software Developer",
+  "Graphic Designer",
 ];
 
 export function Hero() {
@@ -47,7 +46,7 @@ export function Hero() {
               transition={{ delay: 0.1, duration: 0.6 }}
               className="text-6xl sm:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-foreground leading-[1.1] md:leading-[1]"
             >
-              Hi, I'm Avi Pandit.<br />
+              Hi, I'm Abhishek Sharma.<br />
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 md:gap-x-6 mt-2">
                 <span className="text-muted-foreground whitespace-nowrap">I build</span>
                 <div className="relative h-[1.1em] min-w-[280px] sm:min-w-[400px] md:min-w-[500px]">
