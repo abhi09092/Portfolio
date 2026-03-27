@@ -158,7 +158,7 @@ export function Navbar() {
                 <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
               </svg>
             </div>
-            <span className="font-semibold tracking-tighter">AviTube</span>
+            <span className="font-semibold tracking-tighter">AS</span>
           </Link>
         </div>
         
@@ -274,8 +274,8 @@ export function Navbar() {
 
           <div className="w-8 h-8 rounded-full overflow-hidden ml-2 cursor-pointer border border-border shrink-0">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&auto=format&fit=crop"
-              alt="Avatar"
+              src="profile.jpg"
+              alt="Abhishek Sharma"
               width={32}
               height={32}
               className="object-cover w-full h-full"
