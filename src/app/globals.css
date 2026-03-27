@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --card: #ffffff;
+  --card-foreground: #09090b;
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+}
+
+.dark {
+  --background: #09090b;
+  /* Netflix/Dark aesthetic */
+  --foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --card: #141417;
+  /* slightly lighter than background */
+  --card-foreground: #fafafa;
+  --primary: #fafafa;
+  --primary-foreground: #131314;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for horizontal scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Netflix Style Numbering */
+.netflix-number {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 950;
+  line-height: 1;
+  color: #000000;
+  -webkit-text-stroke: 4px #444444;
+  text-stroke: 4px #444444;
+  user-select: none;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  letter-spacing: -0.05em;
+  font-size: 130px; /* Base size for mobile */
+}
+
+@media (min-width: 640px) {
+  .netflix-number {
+    font-size: 220px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .netflix-number {
+    font-size: 300px;
+  }
+}
+
+.dark .netflix-number {
+  color: #000000;
+  -webkit-text-stroke: 4px #71717a;
+  text-stroke: 4px #71717a;
+}
+
+.group:hover .netflix-number {
+  -webkit-text-stroke: 4px #fafafa;
+  text-stroke: 4px #fafafa;
+  transform: scale(1.05) translateX(-5px);
+}
