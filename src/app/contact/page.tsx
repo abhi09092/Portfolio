@@ -71,7 +71,7 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground font-medium">Email</p>
-              <a href="mailto:hello@avi.dev" className="text-foreground font-semibold hover:underline">hello@avi.dev</a>
+              <a href="mailto:hello@avi.dev" className="text-foreground font-semibold hover:underline">abhisheksharmaa.233@gmail.com</a>
             </div>
           </div>
           
@@ -81,7 +81,7 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground font-medium">Location</p>
-              <p className="text-foreground font-semibold">San Francisco, CA</p>
+              <p className="text-foreground font-semibold">Jalandhar, Punjab, India</p>
             </div>
           </div>
 
@@ -91,7 +91,7 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground font-medium">Phone</p>
-              <p className="text-foreground font-semibold">+1 (555) 123-4567</p>
+              <p className="text-foreground font-semibold">+91 9170231926</p>
             </div>
           </div>
         </div>
