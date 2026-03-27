@@ -106,8 +106,8 @@ export const experience = [
 
 export const achievements = [
   {
-    title: "Global AI Hackathon",
-    metric: "1st Place",
+    title: "Google Developer Program Bagdes",
+    metric: "4 Badges",
     description: "Won first place out of 500+ teams by building a real-time AI code assistant."
   },
   {
