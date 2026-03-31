@@ -15,134 +15,171 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = allProjects.find((p) => p.link.split("/").pop() === slug);
+  const project = allProjects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
 
   return (
-    <div className="container mx-auto px-4 py-12 flex flex-col gap-8">
+    <div className="container mx-auto px-4 py-8 md:py-12 flex flex-col gap-6 md:gap-8">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm text-muted-foreground">
         <Link href="/" className="hover:text-foreground transition-colors flex items-center gap-1">
-          <ArrowLeft size={14} /> Back
+          Home
         </Link>
         <span className="text-border">/</span>
         <Link href="/#projects" className="hover:text-foreground transition-colors">
           Projects
         </Link>
         <span className="text-border">/</span>
-        <span className="text-foreground">{project.title}</span>
+        <span className="text-foreground font-medium">{project.title}</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 items-start">
         {/* Main Content (3 columns) */}
-        <div className="lg:col-span-3 flex flex-col gap-10">
+        <div className="lg:col-span-3 flex flex-col gap-8 md:gap-12">
+          {/* Header Info */}
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
               {project.title}
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <div className="flex flex-wrap items-center gap-4 text-sm">
+              <div className="flex items-center gap-1">
+                <span className="text-yellow-500 font-bold">4.8</span>
+                <div className="flex text-yellow-500">
+                  {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
+                </div>
+                <span className="text-muted-foreground ml-1">(128 ratings)</span>
+              </div>
+              <span className="text-muted-foreground">|</span>
+              <span className="text-blue-500 hover:underline cursor-pointer font-medium">Detailed Analytics</span>
+            </div>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
               {project.description}
             </p>
           </div>
 
-          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-xl border border-border bg-muted">
+          {/* Hero Image */}
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-border bg-muted shadow-2xl group">
             <Image
-              src={project.thumbnail}
+              src={`/${project.thumbnail}`}
               alt={`${project.title} preview`}
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
               priority
             />
           </div>
 
-          {/* Details Sections */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">The Problem</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Traditional solutions in this space were too slow, hard to integrate, and didn't scale well with user demand. The client needed a robust platform capable of handling real-time data efficiently without sacrificing user experience.
-              </p>
+          {/* Amazon style Product Description Section */}
+          <div className="space-y-12 py-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-border/50">
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold flex items-center gap-2">
+                  <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm">01</span>
+                  The Problem
+                </h2>
+                <div className="bg-muted/30 p-6 rounded-xl border border-border/50">
+                  <p className="text-muted-foreground leading-relaxed text-lg italic">
+                    "{project.problem}"
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold flex items-center gap-2">
+                  <span className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 text-sm">02</span>
+                  The Solution
+                </h2>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  {project.solution}
+                </p>
+              </div>
             </div>
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">The Solution</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                I engineered a modern full-stack application leveraging the latest frameworks to ensure high performance. We implemented an event-driven architecture that decoupled services and boosted overall throughput by 40%.
-              </p>
-            </div>
-          </div>
 
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Key Features</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                "Real-time data synchronization",
-                "Advanced role-based access control",
-                "Automated nightly reporting",
-                "Seamless third-party API integrations",
-                "Optimized edge-network caching",
-                "Responsive mobile-first design"
-              ].map((feature, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="mt-1 bg-primary/20 p-1 rounded-full text-primary">
-                    <ChevronRight size={14} />
+            {/* Key Features Grid */}
+            <div className="space-y-8 pt-12 border-t border-border/50">
+              <h2 className="text-3xl font-bold">Key Project Features</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {project.features.map((feature, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border/40 hover:border-border transition-colors group">
+                    <div className="mt-1 bg-primary/10 p-2 rounded-lg text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                      <ChevronRight size={18} />
+                    </div>
+                    <div className="space-y-1">
+                      <span className="font-semibold text-foreground">{feature}</span>
+                      <p className="text-xs text-muted-foreground">Optimized for high performance and seamless integration.</p>
+                    </div>
                   </div>
-                  <span className="text-muted-foreground">{feature}</span>
-                </li>
-              ))}
-            </ul>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Sidebar (1 column) - Amazon Style Sticky Buy-Box Equivalent */}
-        <div className="lg:col-span-1 border border-border rounded-xl p-6 bg-card sticky top-24 flex flex-col gap-6 shadow-sm">
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg border-b border-border pb-2">Actions</h3>
-            <div className="flex flex-col gap-3">
-              <a 
-                href="#"
-                className="w-full bg-primary text-primary-foreground flex items-center justify-center gap-2 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors"
-              >
-                <ExternalLink size={18} />
-                Live Demo
-              </a>
-              <a 
-                href="#"
-                className="w-full bg-transparent border border-border text-foreground flex items-center justify-center gap-2 py-3 rounded-md font-medium hover:bg-muted transition-colors"
-              >
-                <GithubIcon />
-                View Source
-              </a>
+        <div className="lg:col-span-1 flex flex-col gap-6">
+          <div className="border-2 border-border rounded-xl p-6 bg-card sticky top-24 flex flex-col gap-6 shadow-xl animate-in fade-in slide-in-from-right duration-500">
+            <div className="space-y-1">
+              <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Project Status</span>
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="font-bold text-xl text-foreground">Live & Optimized</span>
+              </div>
             </div>
-          </div>
 
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg border-b border-border pb-2">Tech Stack</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech) => (
-                <span 
-                  key={tech} 
-                  className="bg-muted text-muted-foreground px-3 py-1 rounded-md text-sm font-medium border border-border/50"
+            <div className="space-y-4 pt-2">
+              <div className="flex flex-col gap-3">
+                <a 
+                  href={project.link}
+                  target="_blank"
+                  className="w-full bg-primary text-primary-foreground flex items-center justify-center gap-2 py-3.5 rounded-lg font-bold hover:bg-primary/90 transition-all active:scale-95 shadow-lg shadow-primary/20"
                 >
-                  {tech}
-                </span>
-              ))}
+                  <ExternalLink size={20} />
+                  Visit Live Site
+                </a>
+                <a 
+                  href={project.githubLink}
+                  target="_blank"
+                  className="w-full bg-secondary text-secondary-foreground flex items-center justify-center gap-2 py-3.5 rounded-lg font-bold hover:bg-secondary/80 transition-all active:scale-95 border border-border"
+                >
+                  <GithubIcon />
+                  View Repository
+                </a>
+              </div>
+              <p className="text-[10px] text-center text-muted-foreground uppercase font-medium tracking-tight">
+                Secure link provided via Portfolio
+              </p>
             </div>
-          </div>
-          
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg border-b border-border pb-2">Impact Metrics</h3>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold tracking-tight text-primary">40%</span>
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">Perf Boost</span>
+
+            <div className="space-y-3 pt-4 border-t border-border">
+              <h3 className="font-bold text-sm text-foreground uppercase tracking-wider">Tech Specifications</h3>
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.map((tech) => (
+                  <span 
+                    key={tech} 
+                    className="bg-muted/50 text-foreground px-2.5 py-1 rounded border border-border/50 text-[10px] font-bold uppercase tracking-wide"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold tracking-tight text-primary">10k+</span>
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">Users</span>
+            </div>
+            
+            <div className="space-y-4 pt-4 border-t border-border">
+              <h3 className="font-bold text-sm text-foreground uppercase tracking-wider">Performance Metrics</h3>
+              <div className="grid grid-cols-2 gap-4">
+                {project.impactMetrics.map((metric, i) => (
+                  <div key={i} className="flex flex-col p-3 rounded-lg bg-muted/30 border border-border/50">
+                    <span className="text-2xl font-black tracking-tight text-primary">{metric.value}</span>
+                    <span className="text-[10px] text-muted-foreground uppercase font-bold tracking-widest">{metric.label}</span>
+                  </div>
+                ))}
               </div>
+            </div>
+
+            <div className="p-3 bg-muted/20 rounded-lg text-xs text-muted-foreground flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              Designed for Scale & Efficiency
             </div>
           </div>
         </div>
