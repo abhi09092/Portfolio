@@ -6,6 +6,7 @@ import { Play, Plus, ThumbsUp, ChevronDown } from "lucide-react";
 
 interface CardProps {
   id: string;
+  slug: string;
   title: string;
   description: string;
   thumbnail: string;
@@ -18,16 +19,16 @@ interface CardProps {
 
 export function ProjectCard({
   title,
+  slug,
   thumbnail,
   techStack,
-  link,
   className,
   variant = "default",
   topNumber,
 }: CardProps) {
   return (
     <div className={cn("group/card relative w-full cursor-pointer z-10 hover:z-50 transition-all duration-300 ease-in-out", className)}>
-      <Link href={link} className="absolute inset-0 z-20">
+      <Link href={`/project/${slug}`} className="absolute inset-0 z-20">
         <span className="sr-only">View {title}</span>
       </Link>
       
