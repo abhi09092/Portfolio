@@ -58,7 +58,7 @@ export function Preloader() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
               >
-                Avi
+                Abhishek
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: 20 }}
@@ -66,7 +66,7 @@ export function Preloader() {
                 transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
                 className="text-primary"
               >
-                .dev
+                .Sharma
               </motion.span>
             </div>
             
