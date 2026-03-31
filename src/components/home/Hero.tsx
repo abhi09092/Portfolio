@@ -24,40 +24,43 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full flex items-start justify-center pt-16 md:pt-20 pb-12 overflow-hidden px-4 bg-background">
+    <section className="relative w-full flex items-start justify-center pt-12 md:pt-16 pb-10 overflow-hidden px-4 bg-background">
 
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
-        {/* Left: Text Content */}
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
+        
+        {/* LEFT */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl">
-          {/* Availability Badge */}
+
+          {/* Badge */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border/50 bg-muted/30 text-sm font-medium mb-8 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border/50 bg-muted/30 text-xs md:text-sm font-medium mb-6"
           >
             <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse" />
             Available for new opportunities
           </motion.div>
-          
-          <div className="flex flex-col gap-8 mb-12">
+
+          {/* Heading */}
+          <div className="flex flex-col gap-6 mb-8">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.6 }}
-              className="text-6xl sm:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-foreground leading-[1.1] md:leading-[1]"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold leading-tight"
             >
-              Hi, I'm Abhishek Sharma.<br />
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 md:gap-x-6 mt-2">
-                <span className="text-muted-foreground whitespace-nowrap">I build</span>
-                <div className="relative h-[1.1em] min-w-[280px] sm:min-w-[400px] md:min-w-[500px]">
+              Hi, I'm Abhishek Sharma.
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-2 mt-2">
+                <span className="text-muted-foreground">I build</span>
+
+                <div className="relative h-[1.2em] min-w-[160px] sm:min-w-[240px] md:min-w-[320px]">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={words[index]}
-                      initial={{ opacity: 0, y: 40 }}
+                      initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -40 }}
-                      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                      className="absolute left-0 top-0 text-transparent bg-clip-text bg-gradient-to-r from-primary via-foreground to-primary whitespace-nowrap pb-2"
+                      exit={{ opacity: 0, y: -30 }}
+                      transition={{ duration: 0.5 }}
+                      className="absolute left-0 top-0 text-transparent bg-clip-text bg-gradient-to-r from-primary via-foreground to-primary whitespace-nowrap"
                     >
                       {words[index]}
                     </motion.span>
@@ -65,61 +68,64 @@ export function Hero() {
                 </div>
               </div>
             </motion.h1>
-            
+
+            {/* Description */}
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-xl"
+              className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed"
             >
               Senior Full Stack Engineer specializing in premium 
               experiences and modern backend architectures.
             </motion.p>
           </div>
-          
-          {/* Action Buttons */}
+
+          {/* BUTTONS (FIXED + RESPONSIVE) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="flex flex-col sm:flex-row items-center gap-6"
+            className="flex flex-col sm:flex-row w-full sm:w-auto items-center gap-3 sm:gap-4"
           >
+            {/* Primary */}
             <Link 
               href="#projects" 
-              className="group relative px-10 py-5 rounded-full bg-primary text-primary-foreground font-bold flex items-center gap-2 overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] active:scale-95 shadow-2xl shadow-primary/20 border border-white/10"
+              className="w-full sm:w-auto justify-center text-sm px-5 py-3 rounded-full bg-primary text-primary-foreground font-medium flex items-center gap-2 transition-all hover:shadow-lg active:scale-95"
             >
-              <span className="relative">View Details</span>
-              <ChevronRight className="relative group-hover:translate-x-1 transition-transform" size={20} />
+              View Details
+              <ChevronRight size={16} />
             </Link>
+
+            {/* Secondary */}
             <Link 
               href="/about" 
-              className="px-10 py-5 rounded-full border border-border bg-muted/20 backdrop-blur-md text-foreground hover:bg-muted/40 font-bold transition-all hover:border-foreground/40 active:scale-95 flex items-center gap-2"
+              className="w-full sm:w-auto justify-center text-sm px-5 py-3 rounded-full border border-border bg-muted/20 text-foreground hover:bg-muted/40 font-medium transition-all flex items-center gap-2"
             >
               About Me
-              <ArrowRight size={18} />
+              <ArrowRight size={16} />
             </Link>
+
+            {/* Resume */}
             <a 
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md text-primary hover:bg-primary/10 font-bold transition-all hover:border-primary/60 active:scale-95 flex items-center gap-2"
+              className="w-full sm:w-auto justify-center text-sm px-5 py-3 rounded-full border border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 font-medium transition-all flex items-center gap-2"
             >
               Resume
             </a>
           </motion.div>
         </div>
 
-        {/* Right: Tech Orbit Centerpiece */}
+        {/* RIGHT */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: 1.2, ease: "easeOut" }}
-          className="flex-1 w-full max-w-[600px] relative pointer-events-none"
+          transition={{ delay: 0.6, duration: 1 }}
+          className="flex-1 w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] pointer-events-none"
         >
           <TechOrbit />
         </motion.div>
       </div>
-      
     </section>
   );
 }
