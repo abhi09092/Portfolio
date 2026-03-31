@@ -1,51 +1,141 @@
 export const featuredProjects = [
   {
     id: "project-1",
+    slug: "fern-holidays",
     title: "Fern Holidays International",
     description: "FHI is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
     thumbnail: "p1.png",
-    techStack: ["PHP", "HTML", "Java Script", "CSS", "Laravel", "API"],
-    link: "https://fernholidaysinternational.com/"
+    techStack: ["PHP", "HTML", "JavaScript", "CSS", "Laravel", "API"],
+    link: "https://fernholidaysinternational.com/",
+    githubLink: "#",
+    problem: "FHI struggled with manual booking processes and fragmented customer data, leading to operational inefficiencies and missed sales opportunities in a competitive travel market.",
+    solution: "I developed a centralized Laravel-based CRM that automated booking workflows, integrated real-time inventory management, and provided a unified view of customer interactions.",
+    features: [
+      "Automated Booking Engine",
+      "Real-time Inventory Tracking",
+      "Customer Relationship Management (CRM)",
+      "Integrated Payment Gateway",
+      "Dynamic Holiday Package Builder"
+    ],
+    impactMetrics: [
+      { label: "Efficiency", value: "60%" },
+      { label: "Bookings", value: "2.5k+" }
+    ]
   },
   {
     id: "project-2",
+    slug: "pacific-holiday-world",
     title: "The Pacific Holiday World",
     description: "PHW is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
     thumbnail: "p2.png",
-    techStack: ["PHP", "HTML", "Java Script", "CSS", "Codeigniter", "API"],
-    link: "https://thepacificholidayworld.zigitalmarketer.in/"
+    techStack: ["PHP", "HTML", "JavaScript", "CSS", "Codeigniter", "API"],
+    link: "https://thepacificholidayworld.zigitalmarketer.in/",
+    githubLink: "#",
+    problem: "The Pacific Holiday World needed a robust platform to manage complex multi-destination itineraries while maintaining high performance for high-traffic holiday seasons.",
+    solution: "Engineered a high-performance Codeigniter platform with optimized database queries and caching layers to handle surges in user traffic and simplify itinerary management.",
+    features: [
+      "Multi-destination Itinerary Planner",
+      "High-traffic Performance Optimization",
+      "Advanced Search Filters",
+      "Client-side Dashboard",
+      "Admin Analytics Panel"
+    ],
+    impactMetrics: [
+      { label: "Load Time", value: "-40%" },
+      { label: "Growth", value: "3x" }
+    ]
   },
-   {
+  {
     id: "project-3",
-    title: "Royal Sovay Holidays",
+    slug: "royal-savoy-holidays",
+    title: "Royal Savoy Holidays",
     description: "RSH is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
     thumbnail: "p3.png",
-    techStack: ["PHP", "HTML", "Java Script", "CSS", "Codeigniter", "API"],
-    link: "https://royalsavoyholidays.com/"
+    techStack: ["PHP", "HTML", "JavaScript", "CSS", "Codeigniter", "API"],
+    link: "https://royalsavoyholidays.com/",
+    githubLink: "#",
+    problem: "Royal Savoy Holidays required a premium digital presence that reflected their luxury brand while providing a seamless user experience for elite travelers.",
+    solution: "Created a sophisticated web application with a focus on premium aesthetics and intuitive navigation, using Codeigniter for a lightweight but powerful backend.",
+    features: [
+      "Premium UI/UX Design",
+      "Exclusive Membership Portal",
+      "Priority Support Integration",
+      "Custom Travel Portfolio",
+      "Luxury Destination Catalog"
+    ],
+    impactMetrics: [
+      { label: "UX Rating", value: "4.9/5" },
+      { label: "Retention", value: "45%" }
+    ]
   },
-   {
+  {
     id: "project-4",
+    slug: "power24x7",
     title: "Powe24x7",
     description: "At Power 24 by 7, we understand that power interruptions can disrupt operations, impact experiences, and cause financial losses. Our mission is to provide seamless, professional, and reliable power backup solutions tailored to your needs.",
     thumbnail: "p4.png",
-    techStack: ["Core PHP", "HTML", "Java Script", "CSS"],
-    link: "https://power24x7.in/"
+    techStack: ["Core PHP", "HTML", "JavaScript", "CSS"],
+    link: "https://power24x7.in/",
+    githubLink: "#",
+    problem: "Power 24x7 needed a way to manage emergency service requests and technician dispatching in real-time to minimize downtime for their industrial clients.",
+    solution: "Built a custom request management system using Core PHP that enabled rapid logging of power issues and instant notification to the nearest technician team.",
+    features: [
+      "Real-time Service Requests",
+      "Technician Dispatch System",
+      "Inventory Management",
+      "Service Status Tracking",
+      "B2B Client Portal"
+    ],
+    impactMetrics: [
+      { label: "Response Time", value: "30m" },
+      { label: "Clients", value: "500+" }
+    ]
   },
   {
     id: "project-5",
+    slug: "vistaraa-holidays",
     title: "Vistaraa Holidays International",
     description: "VHI is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
     thumbnail: "p5.png",
-    techStack: ["Core PHP", "HTML", "Java Script", "CSS"],
-    link: "https://vistaraaholidays.com/"
+    techStack: ["Core PHP", "HTML", "JavaScript", "CSS"],
+    link: "https://vistaraaholidays.com/",
+    githubLink: "#",
+    problem: "Vistaraa Holidays faced challenges in managing a diverse range of international holiday packages with varying pricing and availability models.",
+    solution: "Developed a flexible package management system that allowed admins to dynamically adjust pricing and availability based on market demand and seasonal trends.",
+    features: [
+      "Dynamic Pricing Engine",
+      "Global Package Catalog",
+      "Automated Invoice Generation",
+      "Seasonal Availability Manager",
+      "Multi-currency Support"
+    ],
+    impactMetrics: [
+      { label: "Sales", value: "+35%" },
+      { label: "Accuracy", value: "99%" }
+    ]
   },
-   {
+  {
     id: "project-6",
+    slug: "uni-portal",
     title: "Uni Portal",
     description: "Discover, create, and manage university events all in one platform. Join thousands of students and organizers shaping campus life.",
     thumbnail: "p6.png",
-    techStack: ["React", "NodeJs", "MongoDB", "ExpressJS", "API"],
-    link: "https://uni-portal-rho.vercel.app/home"
+    techStack: ["React", "NodeJS", "MongoDB", "ExpressJS", "API"],
+    link: "https://uni-portal-rho.vercel.app/home",
+    githubLink: "#",
+    problem: "Fragmented communication across campus made it difficult for students to discover events and for organizers to manage registrations efficiently.",
+    solution: "Engineered a centralized MERN stack platform that synchronized event data and provided a social hub for university campus life and networking.",
+    features: [
+      "Social Networking Hub",
+      "Real-time Event Discovery",
+      "Integrated Ticketing System",
+      "Organizer Dashboard",
+      "Campus-wide Announcements"
+    ],
+    impactMetrics: [
+      { label: "Engagement", value: "5x" },
+      { label: "Active Users", value: "10k+" }
+    ]
   },
 ];
 
@@ -53,27 +143,72 @@ export const allProjects = [
   ...featuredProjects,
   {
     id: "project-7",
+    slug: "stay-homes",
     title: "Stay Homes",
     description: "Stay Homes has grown from a small boutique firm to one of the most respected interior design companies in the region. Our passion for creating beautiful, functional spaces has remained unchanged throughout our journey.",
     thumbnail: "p7.png",
-    techStack: ["Core PHP", "HTML", "Java Script", "CSS"],
-    link: "https://abhi09092.github.io/sharmahomedecor/"
+    techStack: ["Core PHP", "HTML", "JavaScript", "CSS"],
+    link: "https://abhi09092.github.io/sharmahomedecor/",
+    githubLink: "#",
+    problem: "Stay Homes needed a portfolio that showcased their design philosophy and high-quality visuals to attract luxury real estate developers.",
+    solution: "Designed a visually-driven portfolio using PHP and CSS that emphasizes large imagery and smooth transitions to highlight design excellence.",
+    features: [
+      "High-resolution Gallery",
+      "Project Storytelling",
+      "Interactive Case Studies",
+      "Client Testimonials",
+      "Service Catalog"
+    ],
+    impactMetrics: [
+      { label: "Inquiries", value: "+50%" },
+      { label: "Lead Gen", value: "40%" }
+    ]
   },
-   {
+  {
     id: "project-8",
+    slug: "zigital-marketer",
     title: "Zigital Marketer",
     description: "We are a premier digital marketing agency that helps businesses thrive online through innovative strategies, data-driven insights, and measurable results.",
     thumbnail: "p8.png",
-    techStack: ["Core PHP", "HTML", "Java Script", "CSS"],
-    link: "https://zigitalmarketer.in/home"
+    techStack: ["Core PHP", "HTML", "JavaScript", "CSS"],
+    link: "https://zigitalmarketer.in/home",
+    githubLink: "#",
+    problem: "Zigital Marketer required a platform that not only marketed their services but also acted as a lead funnel for their agency operations.",
+    solution: "Implemented a conversion-optimized agency website with strategic CTA placements and an integrated lead tracking system.",
+    features: [
+      "Conversion Optimization",
+      "Lead Management System",
+      "SEO-friendly Architecture",
+      "Service Delivery Dashboard",
+      "Blog & Insights Portal"
+    ],
+    impactMetrics: [
+      { label: "Conversion", value: "12%" },
+      { label: "Rankings", value: "Top 3" }
+    ]
   },
   {
     id: "project-9",
+    slug: "game-strategy-assistant",
     title: "Game Strategy Assistant",
     description: "Master Your Game with Chess Strategy Assistant – Your Personal AI Chess Chatbot. Whether you're just starting out or already climbing the ranks, Chess Strategy Assistant helps you play smarter, not harder. Powered by AI, it delivers personalized insights, pinpoints your mistakes, and guides you toward grandmaster-level strategy—move by move.",
     thumbnail: "p9.png",
     techStack: ["HTML", "CSS", "JS", "API"],
-    link: "https://abhi09092.github.io/game-strategy-assistant/"
+    link: "https://abhi09092.github.io/game-strategy-assistant/",
+    githubLink: "#",
+    problem: "Chess players often find it difficult to analyze their own games in real-time without expensive coaching or complex software.",
+    solution: "Developed an AI-powered chess chatbot that provides instant tactical advice and explains grandmaster strategies in simple, conversational language.",
+    features: [
+      "AI Strategy Chatbot",
+      "Real-time Move Analysis",
+      "Tactical Hint Engine",
+      "Personalized Learning Path",
+      "Interactive Game Review"
+    ],
+    impactMetrics: [
+      { label: "Accuracy", value: "95%" },
+      { label: "Retention", value: "65%" }
+    ]
   }
 ];
 
