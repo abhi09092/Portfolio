@@ -5,7 +5,7 @@ export const featuredProjects = [
     description: "FHI is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
     thumbnail: "p1.png",
     techStack: ["PHP", "HTML", "Java Script", "CSS", "Laravel", "API"],
-    link: ""
+    link: "https://fernholidaysinternational.com/"
   },
   {
     id: "project-2",
