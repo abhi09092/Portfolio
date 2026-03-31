@@ -1,145 +1,153 @@
 export const featuredProjects = [
   {
     id: "project-1",
-    title: "AI Code Assistant",
-    description: "An AI-powered terminal application that helps developers write code, catch bugs, and refactor architecture.",
-    thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["React", "TypeScript", "Node.js", "OpenAI"],
-    link: "/project/ai-code-assistant"
+    title: "Fern Holidays International",
+    description: "FHI is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
+    thumbnail: "p1.png",
+    techStack: ["PHP", "HTML", "Java Script", "CSS", "Laravel", "API"],
+    link: "https://fernholidaysinternational.com/"
   },
   {
     id: "project-2",
-    title: "Fintech Dashboard",
-    description: "A real-time financial tracking dashboard with predictive analytics and rich data visualizations.",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["Next.js", "Tailwind CSS", "D3.js", "PostgreSQL"],
-    link: "/project/fintech-dashboard"
+    title: "The Pacific Holiday World",
+    description: "PHW is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
+    thumbnail: "p2.png",
+    techStack: ["PHP", "HTML", "Java Script", "CSS", "Codeigniter", "API"],
+    link: "https://thepacificholidayworld.zigitalmarketer.in/"
   },
-  {
+   {
     id: "project-3",
-    title: "E-Commerce Platform",
-    description: "A modern highly scalable e-commerce storefront with a headless CMS integration.",
-    thumbnail: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["Vue.js", "Nuxt", "Stripe", "Sanity"],
-    link: "/project/ecommerce-platform"
+    title: "Royal Sovay Holidays",
+    description: "RSH is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
+    thumbnail: "p3.png",
+    techStack: ["PHP", "HTML", "Java Script", "CSS", "Codeigniter", "API"],
+    link: "https://royalsavoyholidays.com/"
   },
-  {
+   {
     id: "project-4",
-    title: "E-Commerce Platform",
-    description: "A modern highly scalable e-commerce storefront with a headless CMS integration.",
-    thumbnail: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["Vue.js", "Nuxt", "Stripe", "Sanity"],
-    link: "/project/ecommerce-platform"
+    title: "Powe24x7",
+    description: "At Power 24 by 7, we understand that power interruptions can disrupt operations, impact experiences, and cause financial losses. Our mission is to provide seamless, professional, and reliable power backup solutions tailored to your needs.",
+    thumbnail: "p4.png",
+    techStack: ["Core PHP", "HTML", "Java Script", "CSS"],
+    link: "https://power24x7.in/"
   },
   {
     id: "project-5",
-    title: "E-Commerce Platform",
-    description: "A modern highly scalable e-commerce storefront with a headless CMS integration.",
-    thumbnail: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["Vue.js", "Nuxt", "Stripe", "Sanity"],
-    link: "/project/ecommerce-platform"
+    title: "Vistaraa Holidays International",
+    description: "VHI is a fast-growing holiday planning company committed to delivering memorable and affordable travel experiences for families across the world.",
+    thumbnail: "p5.png",
+    techStack: ["Core PHP", "HTML", "Java Script", "CSS"],
+    link: "https://vistaraaholidays.com/"
   },
-  {
+   {
     id: "project-6",
-    title: "E-Commerce Platform",
-    description: "A modern highly scalable e-commerce storefront with a headless CMS integration.",
-    thumbnail: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["Vue.js", "Nuxt", "Stripe", "Sanity"],
-    link: "/project/ecommerce-platform"
-  }
+    title: "Uni Portal",
+    description: "Discover, create, and manage university events all in one platform. Join thousands of students and organizers shaping campus life.",
+    thumbnail: "p6.png",
+    techStack: ["React", "NodeJs", "MongoDB", "ExpressJS", "API"],
+    link: "https://uni-portal-rho.vercel.app/home"
+  },
 ];
 
 export const allProjects = [
   ...featuredProjects,
   {
     id: "project-7",
-    title: "Social Media Scheduler",
-    description: "Automate and schedule posts across all major social networks from one dashboard.",
-    thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["React", "Express", "MongoDB", "Redis"],
-    link: "/project/social-scheduler"
+    title: "Stay Homes",
+    description: "Stay Homes has grown from a small boutique firm to one of the most respected interior design companies in the region. Our passion for creating beautiful, functional spaces has remained unchanged throughout our journey.",
+    thumbnail: "p7.png",
+    techStack: ["Core PHP", "HTML", "Java Script", "CSS"],
+    link: "https://abhi09092.github.io/sharmahomedecor/"
   },
-  {
+   {
     id: "project-8",
-    title: "Healthcare Portal",
-    description: "A secure patient management portal allowing doctors to track history, prescribe, and schedule.",
-    thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["Angular", "Spring Boot", "MySQL", "AWS HIPAA"],
-    link: "/project/healthcare-portal"
+    title: "Zigital Marketer",
+    description: "We are a premier digital marketing agency that helps businesses thrive online through innovative strategies, data-driven insights, and measurable results.",
+    thumbnail: "p8.png",
+    techStack: ["Core PHP", "HTML", "Java Script", "CSS"],
+    link: "https://zigitalmarketer.in/home"
   },
   {
     id: "project-9",
-    title: "Crypto Wallet App",
-    description: "A secure non-custodial crypto wallet supporting multi-chain token swaps.",
-    thumbnail: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=1200&auto=format&fit=crop",
-    techStack: ["React Native", "Solidity", "Ethers.js"],
-    link: "/project/crypto-wallet"
+    title: "Game Strategy Assistant",
+    description: "Master Your Game with Chess Strategy Assistant – Your Personal AI Chess Chatbot. Whether you're just starting out or already climbing the ranks, Chess Strategy Assistant helps you play smarter, not harder. Powered by AI, it delivers personalized insights, pinpoints your mistakes, and guides you toward grandmaster-level strategy—move by move.",
+    thumbnail: "p9.png",
+    techStack: ["HTML", "CSS", "JS", "API"],
+    link: "https://abhi09092.github.io/game-strategy-assistant/"
   }
 ];
 
 export const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vue.js"] },
-  { category: "Backend", items: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB"] },
-  { category: "DevOps & Tools", items: ["Git", "Docker", "AWS", "CI/CD", "Vercel", "Figma"] }
+  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "HTML"] },
+  { category: "Backend", items: ["Node.js", "Express", "PostgreSQL", "MongoDB", "PHP"] },
+  { category: "DevOps & Tools", items: ["Git", "Docker", "AWS", "Vercel", "Figma"] },
+  { category: "Frameworks", items: ["Laravel", "Codeigniter"] },
+  { category: "Soft Skills", items: ["Leadership", "Time Management"] },
 ];
 
 export const experience = [
   {
-    company: "TechNova Solutions",
-    role: "Senior Full Stack Engineer",
-    period: "2023 - Present",
-    description: "Leading the development of a suite of AI-integrated enterprise tools. Mentoring junior developers and improving CI/CD pipelines.",
+    company: "Fern Holidays International",
+    role: "Full Stack Developer",
+    period: "2025 - Present",
+    description: "Developing and maintaining CRM dashboards for travel operations, including booking management, customer tracking, and reporting systems. Mentoring junior developers and improving CI/CD pipelines.",
   },
   {
-    company: "Creative Web Agency",
-    role: "Frontend Developer",
-    period: "2020 - 2023",
-    description: "Built performant, award-winning marketing websites and e-commerce platforms using modern JavaScript frameworks.",
+    company: "Zigital Marketer",
+    role: "Full Stack Developer",
+    period: "2025 - Present",
+    description: "Built CRM-based dashboards and analytics tools for marketing campaigns, enabling lead tracking, performance monitoring, and client reporting using MERN & PHP frameworks.",
   },
   {
-    company: "Startup Inc",
-    role: "Junior Software Engineer",
-    period: "2018 - 2020",
-    description: "Developed internal dashboards and automated daily reporting scripts to save the ops team 15 hours a week.",
+    company: "The Pacific Holidays World",
+    role: "Frontend & Backend Developer",
+    period: "2020 - 2022",
+    description: "Developed internal CRM dashboards for managing bookings, customer data, and automated reporting systems, reducing manual workload and improving operational efficiency.",
   }
 ];
 
 export const achievements = [
   {
-    title: "Google Developer Program Bagdes",
+    title: "Google Developer Program Badges",
     metric: "4 Badges",
-    description: "Won first place out of 500+ teams by building a real-time AI code assistant."
+    description: "Earned multiple Google Developer badges by completing hands-on technical challenges and skill-based assessments."
   },
   {
-    title: "Open Source",
-    metric: "1M+ DLs",
-    description: "Maintained and contributed to libraries used by thousands of developers globally."
+    title: "Freelancing Success",
+    metric: "10+ Clients",
+    description: "Secured and successfully delivered projects for 10+ clients during my freelancing career, building strong client relationships and consistent results."
   },
   {
-    title: "Platform Growth",
-    metric: "400%",
-    description: "Led the engineering team to scale product infrastructure from 10k to 50k users."
+    title: "Problem Solving",
+    metric: "250+ Questions",
+    description: "Solved 250+ coding problems on LeetCode, strengthening data structures, algorithms, and problem-solving skills."
   }
 ];
 
 export const certifications = [
   {
-    name: "AWS Certified Solutions Architect",
-    platform: "Amazon Web Services",
-    date: "March 2024",
-    link: "#"
+    name: "C Programming",
+    platform: "CSE Pathshala",
+    date: "Jun 2025 - July 2025",
+    link: "https://drive.google.com/file/d/12JYDmFBkGCRBBXlspoz58JbyumclOVJu/view?usp=sharing"
   },
   {
-    name: "Google Cloud Professional Engineer",
-    platform: "Google Cloud",
-    date: "November 2023",
-    link: "#"
+    name: "Privacy and Security in Online Social Media",
+    platform: "NPTEL",
+    date: "Jan 2025 - Apr 2025",
+    link: "https://drive.google.com/file/d/1zcwfyy1HBIc5Ap2ERC2EHO4hBmyEdq4u/view?usp=sharing"
   },
   {
-    name: "Meta Front-End Developer",
-    platform: "Coursera",
-    date: "June 2022",
-    link: "#"
+    name: "MERN Stack",
+    platform: "Digicoders",
+    date: "Oct 2023 - Mar 2024",
+    link: "https://drive.google.com/file/d/1-7oiy1VHErC2kfHfHo8CMbq_dGVYtDiF/view?usp=sharing"
+  },
+  {
+    name: "The Complete Flutter and Dart App Development",
+    platform: "Infosys Springboard",
+    date: "Jan 2024 - Feb 2024",
+    link: "https://drive.google.com/file/d/1XLWRWQQq9VMPtTGKNBmSe3xHcRRcwmiU/view?usp=sharing"
   }
 ];
 
