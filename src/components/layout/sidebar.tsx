@@ -33,8 +33,11 @@ const personalLinks = [
 
 const subscriptions = [
   { name: "Google", color: "bg-red-500", unread: true },
-  { name: "Stanford Univ", color: "bg-blue-500", unread: false },
-  { name: "Open Source", color: "bg-green-500", unread: true },
+  { name: "Lovely Professional University", color: "bg-blue-500", unread: false },
+  { name: "LinkedIn", color: "bg-green-500", unread: true },
+  { name: "Twitter X", color: "bg-yellow-500", unread: false },
+  { name: "GitHub", color: "bg-voilet-500", unread: false },
+  { name: "Amazon", color: "bg-blue-500", unread: false },
   { name: "Freelance", color: "bg-purple-500", unread: false },
 ];
 
