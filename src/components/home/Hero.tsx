@@ -75,7 +75,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed"
             >
-              Senior Full Stack Engineer specializing in premium 
+              Junior Full Stack Developer specializing in premium 
               experiences and modern backend architectures.
             </motion.p>
           </div>
